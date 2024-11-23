@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-cyan-500 text-white md:text-black">
+  <header>
+    <nav class="mt-1 rounded-full md:flex shadow justify-between md:items-center">
+
+        <a href="#" class="px-5">Logo</a>
+
+        <ul class="navlinks text-center duration-500 mr-5 top-[-60%] duration-1 md:flex md:items-center md:bg-transparent z-[-1] md:z-auto md:static absolute w-full left-0 bg-[#2355ff] my-4 gap-8 md:w-auto">
+
+            <li class="text-white pl-7 md:text-black md:pl-4 pointer my-6 md:my-0">Home</li>
+            <li class="text-white pl-7 md:text-black md:pl-4 pointer my-6 md:my-0">Service</li>
+            <li class="text-white pl-7 md:text-black md:pl-4 pointer my-6 md:my-0">Contact</li>
+            <li class="text-white pl-7 md:text-black md:pl-4 pointer my-6 md:my-0">About</li>
+
+        </ul>
+
+        <button onclick="toggleMenu(this)" class="md:hidden txt-3xl aboslute ">&#x2630</button>
+    </nav>
+  </header>
+</body> 
+<script>
+  let Navlinks= document.querySelector('.navlinks')
+  function toggleMenu(e){
+    Navlinks.classList.toggle('top-[9%]')
+  }
+</script>
+</html>
