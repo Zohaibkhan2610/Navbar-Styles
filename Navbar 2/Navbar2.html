@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+</head>
+<body class="bg-sky-400">
+    <header>
+        <nav class="flex justify-between mt-7 px-7 items-center h-6">
+            <img src="Logo.png" class="bg-white rounded-full w-10 h-10" alt="logo">
+        <ion-icon class="sm:hidden Menubtn" name="menu"></ion-icon>
+
+            <ul class="LINKS text-center items-center sm:static sm:bg-transparent sm:stick sm:flex sm:flex-row bg-white sm:w-20 flex-col gap-7 sm:duration-0 mt-[-55%] sm:mt-[0] absolute w-full sm:h-fit left-0 items-center py-4">
+                <li><a class="sm:hover:text-white hover:text-sky-500 font-normal duration-500" href="#">Home</a></li>
+                <li><a class="sm:hover:text-white hover:text-sky-500 font-normal duration-500" href="#">Services</a></li>
+                <li><a class="sm:hover:text-white hover:text-sky-500 font-normal duration-500" href="#">About</a></li>
+                <li><a class="sm:hover:text-white hover:text-sky-500 font-normal duration-500" href="#">Contact</a></li>
+                <li><a class="sm:hover:text-white hover:text-sky-500 font-normal duration-500" href="#">Blog's</a></li>
+            </ul>
+            <button class="border rounded p-2 w-30 h-8 text-center flex items-center hover:bg-white hover:text-black duration-500">Get Started</button>
+        </nav>
+    </header>
+
+</body>
+<script>
+        let m=document.querySelector('.Menubtn');
+    let links= document.querySelector('.LINKS');
+    function Menu(){
+        links.classList.toggle("mt-[45%]");
+        links.classList.toggle("duration-500");
+    }
+    function change(){
+        m.name = m.name === "menu" ? 'close' : "menu"
+    }
+    m.addEventListener('click',
+    function(){
+ Menu();
+ change()
+    }
+    )
+</script>
+</html>
